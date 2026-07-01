@@ -1,0 +1,25 @@
+# Von UE generierte Ordner (maschinenspezifisch, gehören nie ins Repo)
+Binaries/
+Intermediate/
+DerivedDataCache/
+Saved/
+Build/
+
+# IDE-Ordner
+.vs/
+.idea/
+.vscode/
+
+# Visual Studio / Rider generierte Dateien
+*.sln
+*.suo
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+*.opendb
+
+# Sonstiges
+*.tmp
+*.ipch
+.DS_Store
