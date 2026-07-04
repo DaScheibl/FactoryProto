@@ -68,7 +68,7 @@ public:
  
 	// Offset for the first-person camera
 	UPROPERTY(EditAnywhere, Category = Camera)
-	FVector FirstPersonCameraOffset = FVector(2.8f, 5.9f, 0.0f);
+	FVector FirstPersonCameraOffset = FVector(2.8f, 5.9f, 17.0f);
  
 	// First-person camera field of view
 	UPROPERTY(EditAnywhere, Category = Camera)

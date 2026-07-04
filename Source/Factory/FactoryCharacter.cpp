@@ -4,6 +4,7 @@
 #include "FactoryCharacter.h"
 
 #include "Components/SkeletalMeshComponent.h"
+#include "Engine/Engine.h"
 
 // Sets default values
 AFactoryCharacter::AFactoryCharacter()
@@ -55,6 +56,11 @@ void AFactoryCharacter::BeginPlay()
 	
 	check(GEngine != nullptr);
  
+	// Near Clip Plane global reduzieren, um First-Person-Clipping zu vermeiden
+	if (GEngine)
+	{
+		GEngine->Exec(GetWorld(), TEXT("r.SetNearClipPlane 5"));
+	}
 	// Only the owning player sees the first person mesh
 	FirstPersonMeshComponent->SetOnlyOwnerSee(true);
  
@@ -63,10 +69,7 @@ void AFactoryCharacter::BeginPlay()
  
 	// The owning player doesn't see the regular (third-person) body mesh
 	GetMesh()->SetOwnerNoSee(true);
- 
-	// Position the camera slightly above the eyes.
-	FirstPersonCameraComponent->SetRelativeLocation(FVector(2.8f, 5.9f, 0.0f));
- 
+	 
 	// Get the player controller for this character
 	if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
 	{
