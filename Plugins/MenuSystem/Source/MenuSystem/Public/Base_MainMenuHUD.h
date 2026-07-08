@@ -4,12 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/HUD.h"
-#include "MainMenuHUDBase.generated.h"
+#include "Base_MainMenuHUD.generated.h"
 
 class UUserWidget;
 
 UCLASS()
-class MENUSYSTEM_API AMainMenuHUDBase : public AHUD
+class MENUSYSTEM_API ABase_MainMenuHUD : public AHUD
 {
 	GENERATED_BODY()
 

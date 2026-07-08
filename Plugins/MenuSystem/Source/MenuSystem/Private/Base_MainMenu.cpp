@@ -1,6 +1,6 @@
-#include "BaseMainMenu.h"
+#include "Base_MainMenu.h"
 
-void UBaseMainMenu::NativeConstruct()
+void UBase_MainMenu::NativeConstruct()
 {
 	Super::NativeConstruct();
 }

@@ -1,8 +1,8 @@
-#include "MainMenuHUDBase.h"
+#include "Base_MainMenuHUD.h"
 #include "Blueprint/UserWidget.h"
 #include "GameFramework/PlayerController.h"
 
-void AMainMenuHUDBase::BeginPlay()
+void ABase_MainMenuHUD::BeginPlay()
 {
 	Super::BeginPlay();
 

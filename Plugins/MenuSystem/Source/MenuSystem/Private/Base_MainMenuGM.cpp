@@ -1,7 +1,7 @@
-#include "MainMenuGameModeBase.h"
-#include "MainMenuHUDBase.h"
+#include "Base_MainMenuGM.h"
+#include "Base_MainMenuHUD.h"
 
-AMainMenuGameModeBase::AMainMenuGameModeBase()
+ABase_MainMenuGM::ABase_MainMenuGM()
 {
-	HUDClass = AMainMenuHUDBase::StaticClass();
+	HUDClass = ABase_MainMenuHUD::StaticClass();
 }

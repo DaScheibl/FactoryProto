@@ -2,10 +2,10 @@
 
 #include "CoreMinimal.h"
 #include "CommonActivatableWidget.h"
-#include "BaseMainMenu.generated.h"
+#include "Base_MainMenu.generated.h"
 
 UCLASS()
-class MENUSYSTEM_API UBaseMainMenu : public UCommonActivatableWidget
+class MENUSYSTEM_API UBase_MainMenu : public UCommonActivatableWidget
 {
 	GENERATED_BODY()
 

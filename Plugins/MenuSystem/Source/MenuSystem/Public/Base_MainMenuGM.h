@@ -2,13 +2,13 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-#include "MainMenuGameModeBase.generated.h"
+#include "Base_MainMenuGM.generated.h"
 
 UCLASS()
-class MENUSYSTEM_API AMainMenuGameModeBase : public AGameModeBase
+class MENUSYSTEM_API ABase_MainMenuGM : public AGameModeBase
 {
 	GENERATED_BODY()
 
 public:
-	AMainMenuGameModeBase();
+	ABase_MainMenuGM();
 };
