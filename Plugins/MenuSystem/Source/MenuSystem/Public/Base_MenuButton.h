@@ -3,15 +3,24 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Blueprint/UserWidget.h"
+#include "CommonButtonBase.h"
 #include "Base_MenuButton.generated.h"
 
+class UCommonTextBlock;
 /**
  * 
  */
 UCLASS()
-class MENUSYSTEM_API UBase_MenuButton : public UUserWidget
+class MENUSYSTEM_API UBase_MenuButton : public UCommonButtonBase
 {
 	GENERATED_BODY()
 	
+	protected:
+	virtual void NativeConstruct() override;
+	
+	UPROPERTY(meta = (BindWidget))
+	TObjectPtr<UCommonTextBlock> CT_ButtonText;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MenuButton")
+	FText ButtonText;
 };
