@@ -16,11 +16,15 @@ class MENUSYSTEM_API UBase_MenuButton : public UCommonButtonBase
 	GENERATED_BODY()
 	
 	protected:
-	virtual void NativeConstruct() override;
+	virtual void NativePreConstruct() override;
+	virtual void SynchronizeProperties() override;
 	
 	UPROPERTY(meta = (BindWidget))
 	TObjectPtr<UCommonTextBlock> CT_ButtonText;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MenuButton")
 	FText ButtonText;
+	
+private:
+	void UpdateButtonText();
 };
