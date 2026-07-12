@@ -11,7 +11,8 @@
  */
 
 class UButton;
-class UTextBlock;
+class UCommonTextBlock;
+class UBase_MenuButton;
 class UWidgetAnimation;
 
 // Event Dispatcher: entspricht "InputDispatch" mit dem bool-Param "Yes/No"
@@ -36,13 +37,13 @@ protected:
 	virtual void NativeConstruct() override;
 
 	UPROPERTY(meta = (BindWidget))
-	TObjectPtr<UButton> Button_Yes;
+	TObjectPtr<UBase_MenuButton> Button_Yes;
 
 	UPROPERTY(meta = (BindWidget))
-	TObjectPtr<UButton> Button_No;
+	TObjectPtr<UBase_MenuButton> Button_No;
 
 	UPROPERTY(meta = (BindWidget))
-	TObjectPtr<UTextBlock> CT_Message;
+	TObjectPtr<UCommonTextBlock> CT_Message;
 
 	UPROPERTY(Transient, meta = (BindWidgetAnim))
 	TObjectPtr<UWidgetAnimation> FadeIn;

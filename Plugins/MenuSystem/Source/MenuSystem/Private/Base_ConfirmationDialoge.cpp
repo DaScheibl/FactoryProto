@@ -3,6 +3,8 @@
 #include "Components/TextBlock.h"
 #include "Animation/WidgetAnimation.h"
 #include "TimerManager.h"
+#include "Base_MenuButton.h"
+#include "CommonTextBlock.h"
 
 void UBase_ConfirmationDialoge::NativePreConstruct()
 {
@@ -17,16 +19,9 @@ void UBase_ConfirmationDialoge::NativePreConstruct()
 void UBase_ConfirmationDialoge::NativeConstruct()
 {
 	Super::NativeConstruct();
-
-	if (Button_Yes)
-	{
-		Button_Yes->OnClicked.AddDynamic(this, &UBase_ConfirmationDialoge::OnButtonYesClicked);
-	}
-
-	if (Button_No)
-	{
-		Button_No->OnClicked.AddDynamic(this, &UBase_ConfirmationDialoge::OnButtonNoClicked);
-	}
+	
+	Button_Yes->OnClicked().AddUObject(this, &UBase_ConfirmationDialoge::OnButtonYesClicked);
+	Button_No->OnClicked().AddUObject(this, &UBase_ConfirmationDialoge::OnButtonNoClicked);
 }
 
 void UBase_ConfirmationDialoge::ShowDialogue(FText Message)

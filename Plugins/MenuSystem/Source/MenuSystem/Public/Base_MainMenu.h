@@ -18,7 +18,6 @@ protected:
 	UPROPERTY(meta = (BindWidget))
 	TObjectPtr<UBase_MenuButton> MB_Quit;
 
-	// Lazy-erzeugte Dialog-Instanz (entspricht der Variable WBP_ConfirmationDialogue)
 	UPROPERTY()
 	TObjectPtr<UBase_ConfirmationDialoge> ConfirmationDialogue;
 
